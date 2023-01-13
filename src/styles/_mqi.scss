@@ -1,0 +1,16 @@
+@use "variables" as var;
+
+@if var.$enable-media-query-indicator {
+  html::before {
+    @apply fixed z-[99999] pointer-events-none top-0 left-0 text-white text-base p-1;
+
+    background-color: rgba($color: #000, $alpha: 0.4);
+    font-family: "Arial", sans-serif;
+
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      @include media-breakpoint-up($breakpoint) {
+        content: "#{$breakpoint}";
+      }
+    }
+  }
+}

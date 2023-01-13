@@ -1,0 +1,103 @@
+@use "@config/template.config" as *;
+@import "@bootstrap/functions";
+
+//
+// Bootstrap Theming
+// Configuração base do Bootstrap
+// @link https://getbootstrap.com/docs/5.1/customize/overview/
+//
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark".
+// Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio: 4.5;
+
+$variable-prefix: bs-;
+
+$enable-important-utilities: false;
+
+// colors
+$white: #ffffff;
+$black: #000000;
+
+$primary: $tpl-primary;
+$secondary: $tpl-secondary;
+$success: $tpl-success;
+$info: $tpl-info;
+$warning: $tpl-warning;
+$danger: $tpl-danger;
+$light: $tpl-light;
+$dark: $tpl-dark;
+
+// body
+$body-color: $tpl-body-color;
+$body-bg: $white;
+
+// theme
+$theme-colors: $tpl-theme-colors;
+
+// contrast colors
+$color-contrast-dark: $black;
+$color-contrast-light: $white;
+$primary-contrast: color-contrast($primary);
+$secondary-contrast: color-contrast($secondary);
+
+// bases
+$font-size-base: $tpl-font-size-base;
+$line-height-base: $tpl-line-height-base;
+$font-weight-base: $tpl-font-weight-base;
+$font-family-base: $tpl-font-family-base;
+
+// sizings
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1350px,
+);
+
+$spacer: 1rem;
+
+// prettier-ignore
+$spacers: (
+  0: 0,
+  1:  $spacer * 0.25,
+  2:  $spacer * 0.5,
+  3:  $spacer * 0.75,
+  4:  $spacer * 1,
+  5:  $spacer * 1.25,
+  6:  $spacer * 1.5,
+  7:  $spacer * 1.75,
+  8:  $spacer * 2,
+  9:  $spacer * 2.25,
+  10: $spacer * 2.5,
+  11: $spacer * 2.75,
+  12: $spacer * 3,
+  13: $spacer * 3.25,
+  14: $spacer * 3.5,
+  15: $spacer * 3.75,
+  16: $spacer * 4,
+);
+
+$font-size-root: 16px;
+
+// headings
+$headings-font-family: $tpl-headings-font-family;
+$headings-font-style: null;
+$headings-font-weight: 500;
+$headings-line-height: 1.4;
+$headings-color: #343c55;
+
+// fonts
+$font-family-sans-serif: $tpl-font-family-sans-serif;
+
+// grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);

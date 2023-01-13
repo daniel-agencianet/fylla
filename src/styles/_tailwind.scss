@@ -1,0 +1,14 @@
+@use "variables" as var;
+
+@tailwind base;
+@tailwind utilities;
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .position-cover {
+    @apply absolute w-full h-full top-0 left-0;
+  }
+}

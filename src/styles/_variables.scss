@@ -1,0 +1,127 @@
+@use "@config/template.config.scss" as *;
+@use "@bootstrap/functions" as fun;
+
+//
+// Variables
+//
+
+$enable-media-query-indicator: $tpl-enable-media-query-indicator;
+$enable-debug-mode: $tpl-enable-debug-mode;
+
+// variants
+
+// primary
+$primary-100: fun.tint-color($tpl-primary, 80%);
+$primary-200: fun.tint-color($tpl-primary, 60%);
+$primary-300: fun.tint-color($tpl-primary, 40%);
+$primary-400: fun.tint-color($tpl-primary, 20%);
+$primary-500: $tpl-primary;
+$primary-600: fun.shade-color($tpl-primary, 20%);
+$primary-700: fun.shade-color($tpl-primary, 40%);
+$primary-800: fun.shade-color($tpl-primary, 60%);
+$primary-900: fun.shade-color($tpl-primary, 80%);
+
+// secondary
+$secondary-100: fun.tint-color($tpl-secondary, 80%);
+$secondary-200: fun.tint-color($tpl-secondary, 60%);
+$secondary-300: fun.tint-color($tpl-secondary, 40%);
+$secondary-400: fun.tint-color($tpl-secondary, 20%);
+$secondary-500: $tpl-secondary;
+$secondary-600: fun.shade-color($tpl-secondary, 20%);
+$secondary-700: fun.shade-color($tpl-secondary, 40%);
+$secondary-800: fun.shade-color($tpl-secondary, 60%);
+$secondary-900: fun.shade-color($tpl-secondary, 80%);
+
+// rgbs
+// Transforma as variants em RGB para ter acesso ao (opacity modifier syntax) do Tailwind
+// @link https://tailwindcss.com/docs/customizing-colors#using-css-variables
+
+// primary
+$primary-100-rgb: fun.to-rgb($primary-100);
+$primary-200-rgb: fun.to-rgb($primary-200);
+$primary-300-rgb: fun.to-rgb($primary-300);
+$primary-400-rgb: fun.to-rgb($primary-400);
+$primary-500-rgb: fun.to-rgb($primary-500);
+$primary-600-rgb: fun.to-rgb($primary-600);
+$primary-700-rgb: fun.to-rgb($primary-700);
+$primary-800-rgb: fun.to-rgb($primary-800);
+$primary-900-rgb: fun.to-rgb($primary-900);
+
+$primary-variants-rgb: ();
+$primary-variants: ();
+
+// secondary
+$secondary-100-rgb: fun.to-rgb($secondary-100);
+$secondary-200-rgb: fun.to-rgb($secondary-200);
+$secondary-300-rgb: fun.to-rgb($secondary-300);
+$secondary-400-rgb: fun.to-rgb($secondary-400);
+$secondary-500-rgb: fun.to-rgb($secondary-500);
+$secondary-600-rgb: fun.to-rgb($secondary-600);
+$secondary-700-rgb: fun.to-rgb($secondary-700);
+$secondary-800-rgb: fun.to-rgb($secondary-800);
+$secondary-900-rgb: fun.to-rgb($secondary-900);
+
+$secondary-variants-rgb: ();
+$secondary-variants: ();
+
+// primary
+$primary-variants: map-merge(
+  $primary-variants,
+  (
+    "primary-100": $primary-100,
+    "primary-200": $primary-200,
+    "primary-300": $primary-300,
+    "primary-400": $primary-400,
+    "primary-500": $primary-500,
+    "primary-600": $primary-600,
+    "primary-700": $primary-700,
+    "primary-800": $primary-800,
+    "primary-900": $primary-900,
+  )
+);
+
+$primary-variants-rgb: map-merge(
+  $primary-variants-rgb,
+  (
+    "primary-100-rgb": $primary-100-rgb,
+    "primary-200-rgb": $primary-200-rgb,
+    "primary-300-rgb": $primary-300-rgb,
+    "primary-400-rgb": $primary-400-rgb,
+    "primary-500-rgb": $primary-500-rgb,
+    "primary-600-rgb": $primary-600-rgb,
+    "primary-700-rgb": $primary-700-rgb,
+    "primary-800-rgb": $primary-800-rgb,
+    "primary-900-rgb": $primary-900-rgb,
+  )
+);
+
+// secondary
+$secondary-variants: map-merge(
+  $secondary-variants,
+  (
+    "secondary-100": $secondary-100,
+    "secondary-200": $secondary-200,
+    "secondary-300": $secondary-300,
+    "secondary-400": $secondary-400,
+    "secondary-500": $secondary-500,
+    "secondary-600": $secondary-600,
+    "secondary-700": $secondary-700,
+    "secondary-800": $secondary-800,
+    "secondary-900": $secondary-900,
+  )
+);
+
+$secondary-variants-rgb: map-merge(
+  $secondary-variants-rgb,
+  (
+    "secondary-100-rgb": $secondary-100-rgb,
+    "secondary-200-rgb": $secondary-200-rgb,
+    "secondary-300-rgb": $secondary-300-rgb,
+    "secondary-400-rgb": $secondary-400-rgb,
+    "secondary-500-rgb": $secondary-500-rgb,
+    "secondary-600-rgb": $secondary-600-rgb,
+    "secondary-700-rgb": $secondary-700-rgb,
+    "secondary-800-rgb": $secondary-800-rgb,
+    "secondary-900-rgb": $secondary-900-rgb,
+  )
+);

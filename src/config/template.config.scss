@@ -1,0 +1,59 @@
+//
+// Configurações do template
+//
+
+// debug
+$tpl-enable-media-query-indicator: true;
+$tpl-enable-debug-mode: false;
+
+// cores
+$tpl-primary: #f9758f;
+$tpl-secondary: #00c0ff;
+$tpl-success: #38a397;
+$tpl-info: #0dcaf0;
+$tpl-warning: #ffdc60;
+$tpl-danger: #c75c6f;
+$tpl-light: #ecf2f6;
+$tpl-dark: #343c55;
+
+$tpl-body-color: #5e6371;
+
+// tipografia
+$tpl-font-family-sans-serif: "Roboto", sans-serif;
+$tpl-headings-font-family: "Syne", sans-serif;
+$tpl-font-family-base: var(--bs-font-sans-serif);
+
+// tamanhos
+$tpl-font-size-base: 1rem;
+$tpl-line-height-base: 1.75;
+$tpl-font-weight-base: 400;
+
+//
+// Atenção: Alterar tbm no arquivo "template.config.ts"
+//
+
+$navbar-breakpoint: "lg"; // Define a quebra para o responsivo (valores: "md" ou "lg")
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Aviso:
+// Favor não alterar as configurações abaixo!
+
+$tpl-theme-colors: (
+  "primary": $tpl-primary,
+  "secondary": $tpl-secondary,
+  "success": $tpl-success,
+  "info": $tpl-info,
+  "warning": $tpl-warning,
+  "danger": $tpl-danger,
+  "light": $tpl-light,
+  "dark": $tpl-dark,
+);

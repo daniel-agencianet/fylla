@@ -1,0 +1,28 @@
+@use "variables" as var;
+
+.debug-1 {
+  border: 1px solid red !important;
+}
+
+.debug-2 {
+  border: 1px solid green !important;
+}
+
+.debug-3 {
+  border: 1px solid blue !important;
+}
+
+@if var.$enable-debug-mode {
+  .row [class^="col"],
+  .row[class*="row-cols"] > * {
+    border: 1px solid red !important;
+  }
+
+  img {
+    border: 3px dashed blue !important;
+  }
+
+  svg {
+    border: 3px dotted green !important;
+  }
+}
