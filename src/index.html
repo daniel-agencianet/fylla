@@ -10,13 +10,21 @@
     <header>
       <div class="container mt-10">
         <div class="row items-center">
-          <div class="col-2">
+          <div class="col-6 col-md-2">
             <img src="<%= placeholder %>logo.png " alt="" />
           </div>
 
-          <div class="col-10">
+          <div class="col-6 md:hidden">
+            <div class="flex justify-end">
+              <button class="" id="nav-button">
+                <img src="<%= placeholder %>menu.png " class="w-[48px]" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-10 hidden md:block" id="nav">
             <div class="justify-end flex items-center gap-4">
-              <ul class="flex gap-6 mb-0 text-black">
+              <ul class="flex gap-6 mb-0 text-black" id="menu">
                 <li><a href="#">WORK</a></li>
                 <li><a href="#">SERVICES</a></li>
                 <li><a href="#">STUDIO</a></li>
@@ -25,7 +33,7 @@
                 <li><a href="#">PAGES</a></li>
                 <li><a href="#">CART (0)</a></li>
               </ul>
-              <div class="gap-4 flex items-center">
+              <div class="gap-4 items-center hidden xl:flex">
                 <button class="bg-black text-white px-6 py-2 tracking-[5px] rounded-lg">Let's Talk</button>
 
                 <ul class="flex mb-0 items-center gap-3 border-0 border-l pl-4 border-black border-solid">
@@ -44,15 +52,15 @@
       <!-- sobre a agencia -->
       <section class="pt-20 mb-0">
         <div class="container">
-          <div class="row">
-            <div class="col-6">
+          <div class="row gy-8">
+            <div class="col-md-6">
               <div class="flex flex-col h-full">
                 <h1>
                   We are a <br />
                   digital agency <br />
                   from Lisbon.
                 </h1>
-                <p class="text-xl mt-3 w-[42ch]">
+                <p class="text-xl mt-3 max-w-[42ch]">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi totam.
                 </p>
                 <div class="justify-self-end mt-auto">
@@ -60,7 +68,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-6">
+
+            <div class="col-md-6">
               <img src="<%= placeholder %>image.png " class="rounded-xl" alt="" />
             </div>
           </div>
@@ -71,15 +80,17 @@
 
       <section class="py-20">
         <div class="container">
-          <div class="row border-0 border-y border-solid border-black py-20">
-            <div class="col-2 self-center">
+          <div class="row gy-8 border-0 border-y border-solid border-black py-20">
+            <div class="col-md-2 self-center">
               <h2 class="mb-0">OUR CLIENTES</h2>
             </div>
-            <div class="col-1">
+
+            <div class="col-1 hidden md:block">
               <div class="h-full w-[1px] bg-black"></div>
             </div>
-            <div class="col-9">
-              <ul class="flex justify-between items-center mb-0">
+
+            <div class="col-md-9">
+              <ul class="flex flex-wrap gap-5 justify-between items-center mb-0">
                 <li><img src="<%= placeholder %>clientes/1.png" alt="" /></li>
                 <li><img src="<%= placeholder %>clientes/2.png" alt="" /></li>
                 <li><img src="<%= placeholder %>clientes/3.png" alt="" /></li>
@@ -95,12 +106,12 @@
       <!-- what we do -->
       <section class="pb-20">
         <div class="container">
-          <div class="row pb-20 border-0 border-solid border-b border-black">
-            <div class="col-4">
+          <div class="row gy-8 pb-20 border-0 border-solid border-b border-black">
+            <div class="col-md-4">
               <h2 class="">WHAT WE DO</h2>
             </div>
 
-            <div class="col-8 border-0 border-l pl-8 border-black border-solid h-full items-center">
+            <div class="col-md-8 border-0 border-l md:pl-8 border-black border-solid h-full items-center">
               <div class="row justify-between border-0 border-solid border-b border-black pb-5">
                 <div class="col-12">
                   <div class="flex justify-between items-center h-full">
@@ -174,8 +185,8 @@
       <!-- featured work -->
       <section>
         <div class="container">
-          <div class="row">
-            <div class="col-4">
+          <div class="row gy-8">
+            <div class="col-md-4">
               <h2 class="mt-10" data-title="xl">
                 FEATURED <br />
                 WORK
@@ -184,7 +195,7 @@
               <button class="bg-black text-white px-6 py-2 tracking-[5px] rounded-lg mt-12">Let's Talk</button>
             </div>
 
-            <div class="col-8 border-0 border-solid border-l border-black">
+            <div class="col-md-8 border-0 border-solid border-l border-black">
               <div class="row">
                 <div class="col-12">
                   <img src="<%= placeholder %>img-01.png " class="rounded-xl mb-0" alt="" />
@@ -199,15 +210,15 @@
                 </div>
               </div>
 
-              <div class="row mt-10">
-                <div class="col-6 border-0 border-solid border-r border-black">
+              <div class="row mt-10 gy-8">
+                <div class="col-md-6 border-0 border-solid border-r border-black">
                   <img src="<%= placeholder %>img-02.png " class="rounded-xl" alt="" />
                   <div class="flex justify-between">
                     <p class="mt-2">Enjoy Silence</p>
                     <p class="mt-2">2022</p>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                   <img src="<%= placeholder %>img-03.png " class="rounded-xl" alt="" />
                   <div class="flex justify-between">
                     <p class="mt-2">Pure Vision</p>
@@ -216,7 +227,7 @@
                 </div>
               </div>
               <div class="row mt-10">
-                <div class="col-6 border-0 border-solid border-r border-black">
+                <div class="col-md-6 border-0 border-solid border-r border-black">
                   <img src="<%= placeholder %>img-04.png " class="rounded-xl" alt="" />
                   <div class="flex justify-between">
                     <p class="mt-2">Boring Brand</p>
@@ -224,7 +235,7 @@
                   </div>
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-6">
                   <img src="<%= placeholder %>img-05.png " class="rounded-xl" alt="" />
                   <div class="flex justify-between">
                     <p class="mt-2">New Culture</p>
@@ -240,11 +251,11 @@
       <!-- how we work -->
       <section class="py-20">
         <div class="container">
-          <div class="row py-20 border-0 border-solid border-y border-black">
-            <div class="col-8">
+          <div class="row gy-8 py-20 border-0 border-solid border-y border-black">
+            <div class="col-md-8">
               <div class="border-0 border-solid border-r border-black">
                 <h2 class="" data-title="xl">HOW WE WORK</h2>
-                <h3 class="w-[20ch] mt-5">We help our clients succeed with innovative strategies.</h3>
+                <h3 class="max-w-[20ch] mt-5">We help our clients succeed with innovative strategies.</h3>
 
                 <div class="mt-16">
                   <img src="<%= placeholder %>4.png " alt="" />
@@ -252,7 +263,7 @@
               </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-md-4">
               <div class="flex flex-col items-start h-full">
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, voluptate. Delectus provident vero
@@ -277,12 +288,12 @@
 
           <div class="row">
             <div class="col-12 py-20 border-0 border-solid border-y border-black">
-              <div class="row gx-14">
-                <div class="col-6 border-0 border-solid border-r border-black">
+              <div class="row gx-md-14 gy-8">
+                <div class="col-md-6 border-0 border-solid border-r border-black">
                   <img src="<%= placeholder %>values.png " class="rounded-xl" alt="" />
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-6">
                   <div class="grid gap-10">
                     <div class="">
                       <div class="flex gap-10 border-0 border-solid border-b border-black pb-10">
@@ -339,14 +350,14 @@
       <!-- contact -->
       <section class="py-20">
         <div class="container">
-          <div class="row">
-            <div class="col-8 border-0 border-solid border-r border-black">
+          <div class="row gy-8">
+            <div class="col-md-8 border-0 border-solid border-r border-black">
               <h2 class="">CONTACT</h2>
-              <h3 class="mt-5 w-[24ch]" data-title="xl">LET'S BRING YOUR BRAND TO THE NEXT LEVEL</h3>
+              <h3 class="mt-5 max-w-[24ch]" data-title="xl">LET'S BRING YOUR BRAND TO THE NEXT LEVEL</h3>
               <img src="<%= placeholder %>contact.png " class="mt-16" alt="" />
             </div>
 
-            <div class="col-4">
+            <div class="col-md-4">
               <div class="flex flex-col pl-10 items-start h-full">
                 <p class="">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, qui corporis. Eum error, numquam
@@ -369,8 +380,8 @@
             </div>
           </div>
 
-          <div class="row py-20">
-            <div class="col-4">
+          <div class="row gy-8 py-20">
+            <div class="col-md-4">
               <div class="h-full flex flex-col">
                 <img src="<%= placeholder %>news-1.png" class="rounded-xl shrink-0" alt="" />
                 <h3 class="mt-2">BRANDING, DESIGN</h3>
@@ -378,7 +389,7 @@
               </div>
             </div>
 
-            <div class="col-4 border-0 border-solid border-x border-blackS">
+            <div class="col-md-4 border-0 border-solid border-x border-blackS">
               <div class="h-full flex flex-col">
                 <img src="<%= placeholder %>news-2.png" class="rounded-xl shrink-0" alt="" />
                 <h3 class="mt-2">BRANDING, DESIGN</h3>
@@ -386,7 +397,7 @@
               </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-md-4">
               <div class="h-full flex flex-col">
                 <img src="<%= placeholder %>news-3.png" class="rounded-xl shrink-0" alt="" />
                 <h3 class="mt-2">BRANDING, DESIGN</h3>
@@ -401,7 +412,7 @@
     <footer>
       <div class="container">
         <div class="row py-20 border-0 border-solid border-t border-black">
-          <div class="col-4 border-0 border-solid border-r border-black">
+          <div class="col-md-4 border-0 border-solid border-r border-black">
             <img src="<%= placeholder %>logo.png " alt="" />
             <p class="mt-10">
               Main Street. 1 <br />
@@ -421,9 +432,9 @@
             </ul>
           </div>
 
-          <div class="col-8 pl-12">
+          <div class="col-md-8 pl-md-12">
             <div class="row">
-              <div class="col-4">
+              <div class="col-6 col-xl-4">
                 <h2>Pages</h2>
 
                 <ul class="mt-10 flex flex-col gap-5">
@@ -436,7 +447,7 @@
                 <button class="bg-black text-white px-6 py-2 tracking-[5px] rounded-lg mt-10">Let's Talk</button>
               </div>
 
-              <div class="col-4">
+              <div class="col-6 col-xl-4">
                 <h2>CMS</h2>
 
                 <ul class="mt-10 flex flex-col gap-5">
@@ -449,7 +460,7 @@
                 </ul>
               </div>
 
-              <div class="col-4">
+              <div class="col-12 col-xl-4">
                 <h2>Utility Pages</h2>
 
                 <ul class="mt-10 flex flex-col gap-5">
@@ -466,7 +477,7 @@
 
         <div class="row">
           <div class="col-12 border-0 border-solid border-t border-black">
-            <div class="flex py-10 justify-between">
+            <div class="flex flex-wrap py-10 justify-between">
               <p class="mb-0">2022 MADE BY PAWEL GOLA. POWERED BY WEBFLOW.</p>
 
               <ul class="flex gap-5 mb-0">

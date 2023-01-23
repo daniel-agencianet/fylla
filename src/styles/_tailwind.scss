@@ -19,7 +19,7 @@
   }
 
   h1 {
-    @apply text-7xl;
+    @apply lg:text-5xl xl:text-7xl;
   }
   h2 {
     @apply text-base;
@@ -29,10 +29,10 @@
   }
 
   :where(h2, h3)[data-title="xl"] {
-    @apply text-3xl;
+    @apply lg:text-3xl md:text-2xl;
   }
 
   h2[data-title="xxl"] {
-    @apply text-5xl;
+    @apply lg:text-5xl;
   }
 }
